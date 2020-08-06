@@ -8,10 +8,10 @@ end
 
 When(/^I input random user credentials in registration form$/) do
   @fullname = "name#{"jhjhhgf ghhjfhfthtd"}"
-  # @last_name = "lastname#{rand(1..99999)}"
-  email = "hurhur9#{rand(1..99999)}@gmail.com"
+  # # @last_name = "lastname#{rand(1..99999)}"
+  # @email = "email#{"gesirtest"}@gmail.com"
   @screens.home_screen.set_fullname(@fullname)
-  @screens.home_screen.set_email(email)
+  @screens.home_screen.set_email("gesirtest@gmail.com")
   @screens.home_screen.set_password("Parole123")
   @screens.home_screen.set_repassword("Parole123")
 end

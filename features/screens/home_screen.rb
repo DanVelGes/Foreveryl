@@ -1,19 +1,31 @@
 class HomeScreen
 
     def initialize
-      @burger_menu_button = Elements.new(:xpath, '//android.widget.TextView[@text="REGISTER"]')
-      @log_in_button = Elements.new(:xpath, '//*[@resource-id="com.strawberrynetNew.android:id/firstName"]')
-      @register_button = Elements.new(:xpath, '//*[@resource-id="com.strawberrynetNew.android:id/firstName"]')
+        @no_first = Elements.new(:xpath , '//*[@resource-id="com.android.packageinstaller:id/permission_allow_button"]')
+        @no_second = Elements.new(:xpath , '//*[@resource-id="com.android.packageinstaller:id/permission_allow_button"]')
 
-      @fullName = Elements.new(:xpath , '//*[@resource-id="com.strawberrynetNew.android:id/lastName"]')
-      @email_field = Elements.new(:xpath , '//*[@resource-id="com.strawberrynetNew.android:id/email"]')
-      @password_field = Elements.new(:xpath , '//*[@resource-id="com.strawberrynetNew.android:id/password"]')
-      @repassword_field = Elements.new(:xpath , '//*[@resource-id="com.strawberrynetNew.android:id/repassword"]')
-#       @eye_icons = Elements.new(:xpath , '//android.widget.ImageButton[@content-desc="Show password"]')
-      @signup = Elements.new(:xpath , '//android.widget.Button[@text="Sign Up"]')
-#       @cancel_offer_button = Elements.new(:xpath,'//*[@resource-id="com.strawberrynetNew.android:id/btn_cancel"]')
+        @burger_menu_button = Elements.new(:xpath , '//*[@resource-id="com.view9.foreveryng:id/action_overflow_menu"]')
+        @log_in_button = Elements.new(:xpath , '/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[7]/android.widget.LinearLayout')
+        @register_button = Elements.new(:xpath, '//*[@resource-id="com.view9.foreveryng:id/btnRegister"]')
 
+        @fullname = Elements.new(:xpath , '//*[@resource-id="com.view9.foreveryng:id/etFullName"]')
+        @email_field = Elements.new(:xpath , '//*[@resource-id="com.view9.foreveryng:id/etEmail"]')
+        @password_field = Elements.new(:xpath , '//*[@resource-id="com.view9.foreveryng:id/etPassword"]')
+        @repassword_field = Elements.new(:xpath , '//*[@resource-id="com.view9.foreveryng:id/etConfirmPassword"]')
+#         @eye_icons = Elements.new(:xpath , '//android.widget.ImageButton[@content-desc="Show password"]')
+        @signup = Elements.new(:xpath , '//*[@resource-id="com.view9.foreveryng:id/btnSignUp"]')
+#         @cancel_offer_button = Elements.new(:xpath,'//*[@resource-id="com.strawberrynetNew.android:id/btn_cancel"]')
     end
+
+
+  def click_no_first
+    @no_first.click
+  end
+
+
+  def click_no_second
+    @no_second.click
+  end
 
   def click_burger_menu
     @burger_menu_button.click
@@ -33,7 +45,8 @@ class HomeScreen
 #   end
 
   def set_fullname(text)
-  @fullName.set(text)
+    @fullname.set(text)
+  end
 
   def set_email(text)
     @email_field.set(text)
@@ -51,4 +64,5 @@ class HomeScreen
     @signup.click
   end
 
+end
 end

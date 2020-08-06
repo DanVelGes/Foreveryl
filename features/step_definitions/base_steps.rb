@@ -18,13 +18,5 @@ end
 
 
 And(/^I submit the registration details$/) do
-  @screens.home_screen.click_singup
+  @screens.home_screen.click_signup
 end
-
-# And(/^I decline the exclusive offers$/) do
-#   pending
-# end
-#
-# Then(/^the correct welcome message is displayed with my name$/) do
-#   pending
-# end

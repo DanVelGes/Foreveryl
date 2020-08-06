@@ -60,7 +60,7 @@ class HomeScreen
     @repassword_field.set(text)
   end
 
-  def click_singup
+  def click_signup
     @signup.click
   end
 

@@ -9,7 +9,7 @@ class Screens
   end
 
   def wishlist_screen
-    @wishList_screen = WishListScreen.new
+    @wishlist_screen = WishListScreen.new
   end
 
 end

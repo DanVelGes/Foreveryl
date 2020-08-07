@@ -8,9 +8,8 @@ end
 When(/^I input pre\-registered account$/) do
   @screens.login_screen.set_reg_email("gesirtest@gmail.com")
   @screens.login_screen.set_reg_pass("Parole123")
-  @screens.login_screen.click_login_button
 end
 
 Then(/^I submit the registration details to log in$/) do
-  pending
+  @screens.login_screen.click_login_button
 end
